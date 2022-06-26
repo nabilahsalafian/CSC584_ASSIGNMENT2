@@ -20,6 +20,11 @@ public class Report_Delete_Servlet extends HttpServlet{
 	
 	// doPost Method
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		doGet(request, response);
+	}
+	
+	// doGet Method
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		
 		// Delete Report
 		try {

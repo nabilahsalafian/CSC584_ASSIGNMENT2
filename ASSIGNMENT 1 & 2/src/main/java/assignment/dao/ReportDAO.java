@@ -2,8 +2,7 @@ package assignment.dao;
 
 import java.util.*;					// List<>
 import java.sql.*;					// Connect to database
-import java.sql.Date;
-
+import java.sql.Date;				// Date class
 import assignment.connection.*;		// Connect to database
 import assignment.javabean.*;		// Java bean reference
 
@@ -22,7 +21,7 @@ public class ReportDAO {
 	// Update
 	private static final String UPDATE_REPORT = 
 	"UPDATE report " + 
-	"SET inGameID = ?, inGameServer = ?, category = ?, description = ? " +
+	"SET inGameID = ?, inGameServer = ?, category = ?, description = ?" +
 	"WHERE reportID = ?;";
 	
 	// Delete
@@ -87,6 +86,8 @@ public class ReportDAO {
 			updateSQL.setString(2, report.getInGameServer());
 			updateSQL.setString(3, report.getCategory());
 			updateSQL.setString(4, report.getDescription());
+			updateSQL.setInt(5, report.getReportID());
+			
 			
 			// Execute SQL
 			updateSQL.executeUpdate();

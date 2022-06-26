@@ -2,6 +2,9 @@ package assignment.servlet;
 
 import java.io.*;
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
@@ -44,8 +47,9 @@ public class Report_Add_Servlet extends HttpServlet {
 		throws SQLException, ServletException, IOException {
 		
 		// Get Values
-		String enqDate = request.getParameter("enquiryDate");
-		Date enquiryDate = Date.valueOf(enqDate);
+		
+		String enqDateStr = request.getParameter("enquiryDate");
+		Date enquiryDate = Date.valueOf(enqDateStr);
 		int inGameID = Integer.parseInt(request.getParameter("inGameID"));
 		String inGameServer = request.getParameter("inGameServer");
 		String category = request.getParameter("category");

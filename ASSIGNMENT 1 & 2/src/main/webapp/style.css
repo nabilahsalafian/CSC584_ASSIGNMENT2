@@ -1,0 +1,152 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: linear-gradient(135deg, #fa6678, #9b59b6);
+}
+
+.container{
+	max-width: 700px;
+	width: 100%;
+	background: #fff;
+	padding: 25px 30px;
+	border-radius: 15px;
+}
+
+.container .title {
+	font-size: 25px;
+	font-weight: 500;
+	position: relative;
+}
+
+.container .title::before {
+	content:'';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 115px;
+	background: linear-gradient(135deg, #fa6678, #9b59b6);
+}
+
+.container form .form-details {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0 12px 0;
+}
+
+form .form-details .input-box {
+	margin-bottom: 15px;
+	width: calc(100% / 2 - 20px);
+}
+
+.form-details .input-box .details {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.form-details .input-box input {
+	height: 30px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	font-size: 12px;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+
+.form-details .input-box input:focus,
+.form-details .input-box input:valid {
+	border-color: #9b59b6;
+}
+
+/* The radio buttons */
+form .category-details .category-title {
+	font-size: 17px;
+	font-weight: 500;
+}
+
+form .category-details .categories{
+	display: flex;
+	justify-content: space-between;
+}
+
+form .category-details .categories span {
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+/* description */
+.container form .description-details {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0 12px 0;
+}
+
+form .description-details .input-box{
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.description-details .input-box .details {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.description-details .input-box textarea {
+	height: 100px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	font-size: 14px;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+
+.description-details .input-box textarea:focus,
+.description-details .input-box textarea:valid {
+	border-color: #9b59b6;
+}
+
+/*Submit button*/
+form .button {
+	height: 45px;
+	margin-top: 0;
+}
+form .button input{
+	height: 100%;
+	width: 100%;
+	outline: none;
+	color: #fff;
+	border: none;
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 10px;
+	letter-spacing: 1px;
+	background: linear-gradient(135deg, #fa6678, #9b59b6);
+	transition: all 0.2s ease;
+}
+form .button input:hover{
+	font-size: 22px;
+	background: linear-gradient(135deg, #9b59b6, #fa6678);
+}

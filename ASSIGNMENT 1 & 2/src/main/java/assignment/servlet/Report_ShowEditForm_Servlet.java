@@ -21,6 +21,11 @@ public class Report_ShowEditForm_Servlet extends HttpServlet {
 	
 	// doPost Method
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		doGet(request, response);
+	}
+	
+	// doGet Method
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		
 		// Show Edit Form to Update Report 
 		try {
@@ -49,11 +54,13 @@ public class Report_ShowEditForm_Servlet extends HttpServlet {
 		// Select which report to be updated (using the reportID, using DAO), insert into 1 Report object
 		Report existingReport = reportDAO.selectReport(reportID);
 		
+		// Redirect to Edit Form Page (JSP)
+		RequestDispatcher toEditForm = request.getRequestDispatcher("edit-report-form.jsp");
+				
 		// Set an attribute for JSP reference
 		request.setAttribute("report", existingReport);
 		
-		// Redirect to Edit Form Page (JSP)
-		RequestDispatcher toEditForm = request.getRequestDispatcher("report-form.jsp");
+		
 		toEditForm.forward(request, response);
 	
 	}

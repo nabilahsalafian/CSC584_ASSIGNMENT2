@@ -17,6 +17,11 @@ public class Report_ShowNewForm_Servlet extends HttpServlet {
 	
 	// doPost Method
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		doGet(request, response);
+	}
+	
+	// doGet Method
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		
 		// Show New Form to Add New Report
 		try {
@@ -40,7 +45,7 @@ public class Report_ShowNewForm_Servlet extends HttpServlet {
 		throws SQLException, ServletException, IOException {
 		
 		// Redirect user to New Report Form Page (JSP)
-		RequestDispatcher toNewReportForm = request.getRequestDispatcher("report-form.jsp");
+		RequestDispatcher toNewReportForm = request.getRequestDispatcher("new-report-form.jsp");
 		toNewReportForm.forward(request, response);
 		
 	}

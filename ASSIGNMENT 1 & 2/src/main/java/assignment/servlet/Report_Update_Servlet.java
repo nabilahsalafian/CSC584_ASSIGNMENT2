@@ -19,8 +19,13 @@ public class Report_Update_Servlet extends HttpServlet{
 		this.reportDAO = new ReportDAO();
 	}
 	
-	// doPost Method 
+	// do Post Method
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		doGet(request, response);
+	}
+	
+	// doPost Method 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		
 		// Update report
 		try {

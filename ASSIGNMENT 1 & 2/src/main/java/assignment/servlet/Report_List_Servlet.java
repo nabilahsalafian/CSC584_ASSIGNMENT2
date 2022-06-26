@@ -22,6 +22,11 @@ public class Report_List_Servlet extends HttpServlet {
 	
 	// doPost Method
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		doGet(request, response);
+	}
+	
+	// doGet Method
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		
 		// Update List of reports
 		try {
